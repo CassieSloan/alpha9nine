@@ -5,6 +5,9 @@ export const Queries = graphql`
     slice_type
     id
     primary {
+      logo {
+        url
+      }
       title {
         text
       }

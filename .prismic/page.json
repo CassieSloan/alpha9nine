@@ -19,6 +19,9 @@
       "type": "Slices",
       "fieldset": "Slice zone",
       "config": {
+        "labels": {
+          "text_grid": []
+        },
         "choices": {
           "intro_section": {
             "type": "Slice",
@@ -27,6 +30,14 @@
             "icon": "border_top",
             "display": "list",
             "non-repeat": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Logo"
+                }
+              },
               "title": {
                 "type": "StructuredText",
                 "config": {
@@ -45,6 +56,56 @@
               }
             },
             "repeat": {}
+          },
+          "text_grid": {
+            "type": "Slice",
+            "fieldset": "Text Grid",
+            "description": "4 column text grid with title and cta",
+            "icon": "grid_on",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Title",
+                  "placeholder": "Enter a title for the grid"
+                }
+              },
+              "subtitle": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
+                  "label": "Subtitle",
+                  "placeholder": "Enter subtitle"
+                }
+              }
+            },
+            "repeat": {
+              "column_title": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
+                  "label": "Column Title",
+                  "placeholder": "Enter title for column"
+                }
+              },
+              "column_content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, strong, em",
+                  "label": "Column Content",
+                  "placeholder": "Enter column content"
+                }
+              },
+              "price": {
+                "type": "Number",
+                "config": {
+                  "label": "Price",
+                  "placeholder": "Enter price (e.g 10.00)"
+                }
+              }
+            }
           }
         }
       }

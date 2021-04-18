@@ -1,15 +1,16 @@
 import React from 'react';
-import { Section } from 'components';
-import * as styles from './styles.module.scss';
+import { Section, Image } from 'components';
+import './styles.scss';
 
 const IntroSection = (props) => {
   const { data } = props;
   const { primary } = data;
-  const { title, subtitle } = primary;
+  const { title, subtitle, logo } = primary;
   return (
-    <Section containerClassName={styles.container} sliceName="IntroSection">
-      <h1>{title.text}</h1>
-      <p dangerouslySetInnerHTML={{ __html: subtitle.html }} />
+    <Section className="intro-section">
+      <Image className="intro-section-logo" image={logo} />
+      <h1 className="intro-section-title">{title.text}</h1>
+      <p className="intro-section-subtitle" dangerouslySetInnerHTML={{ __html: subtitle.html }} />
     </Section>
   );
 };
