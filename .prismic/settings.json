@@ -1,0 +1,23 @@
+{
+  "Main": {},
+  "Photo Gallery": {
+    "photo_gallery": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {
+                "width": 2000
+              },
+              "thumbnails": [],
+              "label": "Image"
+            }
+          }
+        },
+        "label": "Photo Gallery"
+      }
+    }
+  }
+}

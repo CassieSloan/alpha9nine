@@ -56,6 +56,7 @@ export const pageQuery = graphql`
         body {
           ...IntroSectionPageFragment
           ...TextGridPageFragment
+          ...TwoColsImageTextPageFragment
         }
       }
     }

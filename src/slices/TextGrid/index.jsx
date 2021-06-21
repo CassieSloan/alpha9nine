@@ -4,7 +4,6 @@ import './styles.scss';
 
 const TextGrid = (props) => {
   const { data } = props;
-  console.log(data);
   const { primary, items } = data;
   const { title, subtitle } = primary;
 
@@ -19,7 +18,6 @@ const TextGrid = (props) => {
             <div className="text-grid-column">
               <div className="text-grid-column-title" dangerouslySetInnerHTML={{ __html: colTitle.html }} />
               <div className="text-grid-column-content" dangerouslySetInnerHTML={{ __html: content.html }} />
-              {price && <div className="text-grid-column-price">From ${price}*</div>}
             </div>
           );
         })}

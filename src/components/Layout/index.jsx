@@ -1,6 +1,7 @@
 import React from 'react';
 import { Footer, Header, SEO, NoJs, WmAscii } from 'components';
-import 'typeface-lato';
+import 'typeface-karla';
+import 'typeface-poppins';
 import '../../sass/global/styles.scss';
 import './styles.scss';
 

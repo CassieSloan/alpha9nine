@@ -16,12 +16,12 @@ $font-weight-bold: 700;
 
 
 @mixin heading-font() {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: $font-weight-bold;
 }
 
 @mixin body-font() {
-  font-family: 'Lato', Sans-Serif;
+  font-family: 'Poppins', Sans-Serif;
   font-size: 16px;
   font-weight: $font-weight-regular;
   line-height: 1.6em;

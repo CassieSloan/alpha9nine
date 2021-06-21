@@ -1,108 +1,191 @@
 {
-  "Main": {
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "Slug",
-        "placeholder": "Enter slug"
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug",
+        "placeholder" : "Enter slug"
       }
     },
-    "prismic_reference": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading1",
-        "label": "Prismic Reference",
-        "placeholder": "Enter Prismic Reference"
+    "prismic_reference" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Prismic Reference",
+        "placeholder" : "Enter Prismic Reference"
       }
     },
-    "body": {
-      "type": "Slices",
-      "fieldset": "Slice zone",
-      "config": {
-        "labels": {
-          "text_grid": []
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "text_grid" : [ ],
+          "two_cols_image_text" : [ ],
+          "feature_list" : [ ]
         },
-        "choices": {
-          "intro_section": {
-            "type": "Slice",
-            "fieldset": "Intro Section",
-            "description": "Intro section for page",
-            "icon": "border_top",
-            "display": "list",
-            "non-repeat": {
-              "logo": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "Logo"
+        "choices" : {
+          "intro_section" : {
+            "type" : "Slice",
+            "fieldset" : "Intro Section",
+            "description" : "Intro section for page",
+            "icon" : "border_top",
+            "display" : "list",
+            "non-repeat" : {
+              "logo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Logo"
                 }
               },
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading1",
-                  "label": "Title",
-                  "placeholder": "Enter title"
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Title",
+                  "placeholder" : "Enter title"
                 }
               },
-              "subtitle": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading2",
-                  "label": "Subtitle",
-                  "placeholder": "Enter subtitle"
+              "subtitle" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Subtitle",
+                  "placeholder" : "Enter subtitle"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "text_grid": {
-            "type": "Slice",
-            "fieldset": "Text Grid",
-            "description": "4 column text grid with title and cta",
-            "icon": "grid_on",
-            "display": "list",
-            "non-repeat": {
-              "title": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
-                  "label": "Title",
-                  "placeholder": "Enter a title for the grid"
+          "text_grid" : {
+            "type" : "Slice",
+            "fieldset" : "Text Grid",
+            "description" : "4 column text grid with title and cta",
+            "icon" : "grid_on",
+            "display" : "list",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Title",
+                  "placeholder" : "Enter a title for the grid"
                 }
               },
-              "subtitle": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
-                  "label": "Subtitle",
-                  "placeholder": "Enter subtitle"
+              "subtitle" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
+                  "label" : "Subtitle",
+                  "placeholder" : "Enter subtitle"
                 }
               }
             },
-            "repeat": {
-              "column_title": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
-                  "label": "Column Title",
-                  "placeholder": "Enter title for column"
+            "repeat" : {
+              "column_title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em",
+                  "label" : "Column Title",
+                  "placeholder" : "Enter title for column"
                 }
               },
-              "column_content": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, strong, em",
-                  "label": "Column Content",
-                  "placeholder": "Enter column content"
+              "column_content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, list-item",
+                  "label" : "Column Content",
+                  "placeholder" : "Enter column content"
                 }
               },
-              "price": {
-                "type": "Number",
-                "config": {
-                  "label": "Price",
-                  "placeholder": "Enter price (e.g 10.00)"
+              "price" : {
+                "type" : "Number",
+                "config" : {
+                  "label" : "Price",
+                  "placeholder" : "Enter price (e.g 10.00)"
+                }
+              }
+            }
+          },
+          "two_cols_image_text" : {
+            "type" : "Slice",
+            "fieldset" : "Two Cols Image Text",
+            "description" : "Two columns one image one text",
+            "icon" : "art_track",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 2000
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Title",
+                  "placeholder" : "Enter title for column"
+                }
+              },
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em, hyperlink",
+                  "label" : "Content",
+                  "placeholder" : "Enter content for column"
+                }
+              }
+            },
+            "repeat" : { }
+          },
+          "feature_list" : {
+            "type" : "Slice",
+            "fieldset" : "Feature list",
+            "description" : "List of features/USPs",
+            "icon" : "library_add",
+            "display" : "list",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Title",
+                  "placeholder" : "Title for feature list"
+                }
+              }
+            },
+            "repeat" : {
+              "icon" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : 2000
+                  },
+                  "thumbnails" : [ ],
+                  "label" : "Icon"
+                }
+              },
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label" : "Title",
+                  "placeholder" : "Feature title"
+                }
+              },
+              "content" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong, em",
+                  "label" : "Content",
+                  "placeholder" : "Feature content"
                 }
               }
             }
@@ -111,40 +194,40 @@
       }
     }
   },
-  "SEO": {
-    "meta_title": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading1",
-        "label": "Meta Title",
-        "placeholder": "Enter meta title"
+  "SEO" : {
+    "meta_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Meta Title",
+        "placeholder" : "Enter meta title"
       }
     },
-    "meta_description": {
-      "type": "StructuredText",
-      "config": {
-        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
-        "label": "Meta Description",
-        "placeholder": "Enter meta description"
+    "meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Meta Description",
+        "placeholder" : "Enter meta description"
       }
     },
-    "schema": {
-      "type": "StructuredText",
-      "config": {
-        "multi": "preformatted",
-        "label": "Schema",
-        "placeholder": "Enter JSON schema"
+    "schema" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "preformatted",
+        "label" : "Schema",
+        "placeholder" : "Enter JSON schema"
       }
     },
-    "open_graph_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {
-          "width": 1200,
-          "height": 630
+    "open_graph_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1200,
+          "height" : 630
         },
-        "thumbnails": [],
-        "label": "Open Graph Image"
+        "thumbnails" : [ ],
+        "label" : "Open Graph Image"
       }
     }
   }

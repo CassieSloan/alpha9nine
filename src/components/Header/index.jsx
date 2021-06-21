@@ -2,7 +2,11 @@ import React from 'react';
 import { Link, Logo } from 'components';
 import * as styles from './styles.module.scss';
 
-const links = [{ to: '/goodbye', text: 'Goodbye', className: `button ${styles.button}` }];
+const links = [
+  { to: '/contact-us', text: 'Contact Us' },
+  { to: '/about', text: 'About Us' },
+  { to: '/photo-gallery', text: 'Hall of Fame' },
+];
 
 const Header = () => (
   <header className={styles.header}>
