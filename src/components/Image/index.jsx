@@ -22,7 +22,9 @@ const Image = (props) => {
 
   if (image.url) {
     return (
-      <img className={`gatsby-image ${className}`} src={image.url} alt={image.alt || alt || ''} style={imgStyle} />
+      <div className={`gatsby-image ${className}`}>
+        <img src={image.url} alt={image.alt || alt || ''} style={imgStyle} />
+      </div>
     );
   }
 

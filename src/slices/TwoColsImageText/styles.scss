@@ -1,16 +1,28 @@
 .text-image {
   position: relative;
   overflow: hidden;
+  background-color: $tertiary;
+  img {
+    object-fit: cover!important;
+    object-position: top;
+  }
   .text-image-grid {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     @include media-down(tablet) {
       grid-template-columns: 1fr;
     }
   }
+  .flower-dog {
+    position: absolute;
+    right: 60%;
+    bottom: 0;
+    z-index: 999;
+  }
   .text-image-text {
     max-width: 440px;
-    padding: 80px 0;
+    padding: 40px 0;
     color: $black;
     @include media-down(small-desktop) {
       max-width: 500px;
@@ -55,15 +67,16 @@
   .text-image-img {
     height: 100%;
     width: 100%;
-    max-height: 600px;
     position: relative;
     opacity: 0;
     right: -70px;
-    bottom: 0;
+    bottom: -5%;
     transition: right 1s ease, opacity 0.6s;
-
     .gatsby-image {
-      min-height: 520px;
+      max-height: 500px;
+      height: 100%;
+      object-fit: cover!important;
+
       @include media-down(tablet) {
         min-height: 0;
         max-height: 400px;
@@ -73,6 +86,10 @@
       }
       @include media-down(mobile) {
         max-height: 200px;
+      }
+      img {
+        object-fit: cover!important;
+        object-position: top;
       }
     }
   }
